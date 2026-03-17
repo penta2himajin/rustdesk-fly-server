@@ -1,0 +1,39 @@
+app = "rustdesk-fly-server"
+primary_region = "nrt"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[mounts]
+  source = "rustdesk_data"
+  destination = "/root"
+
+[[services]]
+  internal_port = 21115
+  protocol = "tcp"
+  [[services.ports]]
+    port = 21115
+
+[[services]]
+  internal_port = 21116
+  protocol = "tcp"
+  [[services.ports]]
+    port = 21116
+
+[[services]]
+  internal_port = 21116
+  protocol = "udp"
+  [[services.ports]]
+    port = 21116
+
+[[services]]
+  internal_port = 21117
+  protocol = "tcp"
+  [[services.ports]]
+    port = 21117
+
+[[services]]
+  internal_port = 21118
+  protocol = "tcp"
+  [[services.ports]]
+    port = 21118
