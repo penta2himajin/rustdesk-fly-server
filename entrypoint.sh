@@ -1,4 +1,4 @@
 #!/bin/sh
-# Start hbbr in background, then run hbbs in foreground
+cd /root
 hbbr &
-exec hbbs -r localhost:21117
+exec hbbs -r rustdesk-fly-server.fly.dev:21117

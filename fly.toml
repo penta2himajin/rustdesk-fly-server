@@ -4,6 +4,9 @@ primary_region = "nrt"
 [build]
   dockerfile = "Dockerfile"
 
+[env]
+  ALWAYS_USE_RELAY = "Y"
+
 [mounts]
   source = "rustdesk_data"
   destination = "/root"
@@ -13,12 +16,14 @@ primary_region = "nrt"
   protocol = "tcp"
   [[services.ports]]
     port = 21115
+    handlers = []
 
 [[services]]
   internal_port = 21116
   protocol = "tcp"
   [[services.ports]]
     port = 21116
+    handlers = []
 
 [[services]]
   internal_port = 21116
@@ -31,9 +36,11 @@ primary_region = "nrt"
   protocol = "tcp"
   [[services.ports]]
     port = 21117
+    handlers = []
 
 [[services]]
   internal_port = 21118
   protocol = "tcp"
   [[services.ports]]
     port = 21118
+    handlers = []
